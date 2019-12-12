@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { SnackbarProvider } from 'notistack'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Container from '@material-ui/core/Container'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import blue from '@material-ui/core/colors/blue'
+import red from '@material-ui/core/colors/red'
+
+import Search from './Search'
+
+export default function App() {
+	const theme = createMuiTheme({ palette : {
+		primary : blue,
+		secondary : red
+	} })
+
+	return (
+		<Router>
+			<CssBaseline />
+			<ThemeProvider theme={ theme }>
+				<SnackbarProvider>
+					<Container>
+						<Search />
+					</Container>
+				</SnackbarProvider>
+			</ThemeProvider>
+		</Router>
+	)
 }
-
-export default App;
