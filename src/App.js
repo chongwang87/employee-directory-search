@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { SnackbarProvider } from 'notistack'
-import CssBaseline from '@material-ui/core/CssBaseline'
+
 import Container from '@material-ui/core/Container'
+import CssBaseline from '@material-ui/core/CssBaseline'
+
+import { SnackbarProvider } from 'notistack'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
 import blue from '@material-ui/core/colors/blue'
@@ -17,7 +18,7 @@ export default function App() {
 	} })
 
 	return (
-		<Router>
+		<>
 			<CssBaseline />
 			<ThemeProvider theme={ theme }>
 				<SnackbarProvider>
@@ -26,6 +27,6 @@ export default function App() {
 					</Container>
 				</SnackbarProvider>
 			</ThemeProvider>
-		</Router>
+		</>
 	)
 }

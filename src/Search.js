@@ -45,17 +45,7 @@ export default function Search() {
 		{ enqueueSnackbar } = useSnackbar(),
 		[query, setQuery] = useState(),
 		[result, setResult] = useState(),
-		[employees, setEmployees] = useState([
-			'John Hartman',
-			'Samad Pitt',
-			'Amaya Knight',
-			'Leanna Hogg',
-			'Aila Hodgson',
-			'Vincent Todd',
-			'Faye Oneill',
-			'Lynn Haigh',
-			'Nylah Riddle'
-		]),
+		[employees, setEmployees] = useState(),
 		[employee, setEmployee] = useState(null)
 
 	async function fetchEmployees() {
@@ -77,7 +67,7 @@ export default function Search() {
 	}
 
 	useEffect(() => {
-		// fetchEmployees()
+		fetchEmployees()
 	}, [])
 
 	const handleChange = (e) => {
@@ -152,7 +142,7 @@ export default function Search() {
 											<Button
 												variant="contained"
 												onClick={ handleReset }
-												startIcon={ <ArrowBackIosIcon />}
+												startIcon={ <ArrowBackIosIcon /> }
 											>
 												Back
 											</Button>
@@ -172,20 +162,16 @@ export default function Search() {
 					<Typography variant="h3" className={ classes.header }>
 						Employee Explorer
 					</Typography>
-					{ employees.length > 0 ?
-						<Paper component="form" className={ classes.searchBox }>
-							<InputBase
-								className={ classes.input }
-								placeholder="Search Employee"
-								onChange={ handleChange }
-							/>
-							<IconButton type="submit" onSubmit={ handleSearch } onClick={ handleSearch }>
-								<SearchIcon />
-							</IconButton>
-						</Paper>
-						:
-						<CircularProgress className={ classes.circular } />
-					}
+					<Paper component="form" className={ classes.searchBox }>
+						<InputBase
+							className={ classes.input }
+							placeholder="Search Employee"
+							onChange={ handleChange }
+						/>
+						<IconButton type="submit" onSubmit={ handleSearch } onClick={ handleSearch }>
+							<SearchIcon />
+						</IconButton>
+					</Paper>
 				</Grid>
 			}
 		</Grid>
