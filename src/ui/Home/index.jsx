@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from './node_modules/react'
-import { useSnackbar } from './node_modules/notistack'
+import React, { useState, useEffect } from 'react'
+import { useSnackbar } from 'notistack'
 
-import Box from './node_modules/@material-ui/core/Box'
-import Button from './node_modules/@material-ui/core/Button'
-import CircularProgress from './node_modules/@material-ui/core/CircularProgress'
-import Grid from './node_modules/@material-ui/core/Grid'
-import IconButton from './node_modules/@material-ui/core/IconButton'
-import InputBase from './node_modules/@material-ui/core/InputBase'
-import Paper from './node_modules/@material-ui/core/Paper'
-import Typography from './node_modules/@material-ui/core/Typography'
-import { makeStyles } from './node_modules/@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import Grid from '@material-ui/core/Grid'
+import IconButton from '@material-ui/core/IconButton'
+import InputBase from '@material-ui/core/InputBase'
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
 
-import SearchIcon from './node_modules/@material-ui/icons/Search'
-import ArrowBackIosIcon from './node_modules/@material-ui/icons/ArrowBackIos'
+import SearchIcon from '@material-ui/icons/Search'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 
 const useStyles = makeStyles(theme => ({
 	body : { padding : theme.spacing(5, 0) },
