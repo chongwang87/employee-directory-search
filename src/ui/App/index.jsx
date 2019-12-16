@@ -29,7 +29,7 @@ export default function App() {
 							<Route exact path='/'>
 								<Home />
 							</Route>
-							<Route path='/employee'>
+							<Route path='/employee/:name'>
 								<Employee />
 							</Route>
 						</Switch>
